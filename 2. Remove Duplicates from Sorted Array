@@ -1,0 +1,17 @@
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        if (nums.length == 0) return 0;
+
+        int j = 0; // pointer for the next unique position
+
+        for (int i = 1; i < nums.length; i++) {
+            // If current element is different from the last unique one
+            if (nums[i] != nums[j]) {
+                j++; // move to next unique position
+                nums[j] = nums[i]; // update nums[j] with the new unique element
+            }
+        }
+
+        return j + 1; // return the count of unique elements (j is 0-based)
+    }
+}
