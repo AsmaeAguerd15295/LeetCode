@@ -1,4 +1,4 @@
-Q1. Find the K-th Character in String Game I
+/*Q1. Find the K-th Character in String Game I
 
 Alice and Bob are playing a game. Initially, Alice has a string word = "a".
 
@@ -34,12 +34,11 @@ Input: k = 10
 
 Output: "c"
 
- 
 
 Constraints:
 
 1 <= k <= 500
-Copyright ©️ 2024 LeetCode All rights reserved
+Copyright ©️ 2024 LeetCode All rights reserved*/
 
 
 class Solution {
