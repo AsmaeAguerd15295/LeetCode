@@ -37,24 +37,23 @@ Both list1 and list2 are sorted in non-decreasing order.*/
  */
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        // Dummy node to act as the start of the merged list
+        
         ListNode dummy = new ListNode(-1);
-        // Pointer to build the new list
         ListNode current = dummy;
 
-        // Traverse both lists until one is fully traversed
+        
         while (list1 != null && list2 != null) {
             if (list1.val <= list2.val) {
                 current.next = list1;
-                list1 = list1.next; // Move to the next node in list1
+                list1 = list1.next; 
             } else {
                 current.next = list2;
-                list2 = list2.next; // Move to the next node in list2
+                list2 = list2.next; 
             }
-            current = current.next; // Move the pointer forward
+            current = current.next; 
         }
 
-        // Attach the remaining nodes from list1 or list2
+        
         if (list1 != null) {
             current.next = list1;
         } else if (list2 != null) {
